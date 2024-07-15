@@ -1,0 +1,17 @@
+node_modules
+*.vim
+.env*
+*.mp4
+main
+node_modules
+*.vim
+.env*
+*.mp4
+bin
+utils/playground/playground.linux.amd64
+cube
+bin/*
+node_modules
+*.vim
+.env*
+*.mp4

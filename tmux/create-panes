@@ -1,0 +1,57 @@
+#!/bin/bash
+
+tmux split-window -h
+
+tmux select-pane -t 1
+tmux split-window -v
+
+tmux select-pane -t 3
+tmux split-window -v
+
+tmux select-pane -t 1
+tmux split-window -v
+
+tmux select-pane -t 4
+tmux split-window -v
+
+tmux select-pane -t 3
+tmux split-window -v
+
+tmux select-pane -t 7
+tmux split-window -v
+
+
+tmux select-pane -t 1
+tmux send-keys "ssh capstone" C-m
+tmux send-keys "cd dotfiles/nix ; nix-shell" C-m
+tmux send-keys "cd ~/dotfiles/nix/services/caddy" C-m
+
+tmux select-pane -t 5
+tmux send-keys "ssh capstone" C-m
+tmux send-keys "cd dotfiles/nix ; nix-shell" C-m
+tmux send-keys "cd ~/dotfiles/nix/services/caddy" C-m
+
+tmux select-pane -t 2
+tmux send-keys "echo 'local 1 (manager)'" C-m
+
+tmux select-pane -t 6
+tmux send-keys "echo 'local 2 (manager)'" C-m
+
+
+tmux select-pane -t 3
+tmux send-keys "ssh kafka-ciscowifi" C-m
+tmux send-keys "echo '3'" C-m
+
+tmux select-pane -t 7
+tmux send-keys "ssh kafka-ciscowifi" C-m
+tmux send-keys "echo '7'" C-m
+
+
+tmux select-pane -t 4
+tmux send-keys "ssh datads-prod-01" C-m
+tmux send-keys "echo '4'" C-m
+
+
+tmux select-pane -t 8
+tmux send-keys "ssh datads-prod-01" C-m
+tmux send-keys "echo '8'" C-m

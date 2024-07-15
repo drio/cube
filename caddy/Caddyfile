@@ -1,0 +1,38 @@
+localhost:80 {
+	respond "Here localhost 2!"
+}
+
+cd3.drtufts.net {
+	#respond "cd3.drtufts.net"
+
+	route /static* {
+		root * /home/ubuntu/dotfiles/nix/services/caddy
+		file_server
+	}
+
+	reverse_proxy /* {
+		to kafka-ciscowifi:8888 datads-prod-01:8888
+
+		lb_policy round_robin
+		lb_retries 1
+
+		health_uri /health
+		health_interval 1s
+		health_timeout 2s
+		health_status 2xx
+	}
+
+	handle_errors {
+		@all_down {
+			expression {http.error.status_code} == 503
+		}
+		rewrite @all_down /static/error.html
+		file_server {
+			root /home/ubuntu/dotfiles/nix/services/caddy
+		}
+	}
+	  
+	header {
+        ?Cache-Control "max-age=0"
+    }
+}
