@@ -1,4 +1,7 @@
-# Cube: a toy orchestrator
+<h2 align="center">caddy-saml-sso (a caddy plugin for SAML SSO)</h2> 
+<p align="center">
+  <img align="center" src="md/saml-for-the.png" width="600px" alt="saml for the befuddled"/>
+</p>
 
 I recently read the book [building an orchestrator in
 go](https://www.manning.com/books/build-an-orchestrator-in-go-from-scratch).
@@ -19,7 +22,4 @@ ocean. The machines connect via the Wireguard direct connections Tailscale
 provides. 
 
 
-<h2 align="center">Cube, a toy orchestrator.</h2> 
-<p align="center">
-  <img align="center" src="./robot.png" width="500px" alt="cube orchestrator"/>
-</p>
+
