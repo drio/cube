@@ -17,3 +17,7 @@ Tailscale. In the example that I show, the manager runs in the local machine,
 one of the workers runs in AWS and the other on prom. Caddy runs in digital
 ocean. The machines connect via the Wireguard direct connections Tailscale
 provides. 
+
+<center>
+<img src="./robot.png" width="400px"/>
+</center>
