@@ -1,6 +1,6 @@
-<h2 align="center">caddy-saml-sso (a caddy plugin for SAML SSO)</h2> 
+<h2 align="center">Cube: a toy orchestrator</h2> 
 <p align="center">
-  <img align="center" src="md/saml-for-the.png" width="600px" alt="saml for the befuddled"/>
+  <img align="center" src="robot.png" width="400px" alt="cube"/>
 </p>
 
 I recently read the book [building an orchestrator in
