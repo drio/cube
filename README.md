@@ -18,6 +18,8 @@ one of the workers runs in AWS and the other on prom. Caddy runs in digital
 ocean. The machines connect via the Wireguard direct connections Tailscale
 provides. 
 
-<center>
-<img src="./robot.png" width="400px"/>
-</center>
+
+<h2 align="center">Cube, a toy orchestrator.</h2> 
+<p align="center">
+  <img align="center" src="./robot.png" width="500px" alt="cube orchestrator"/>
+</p>
